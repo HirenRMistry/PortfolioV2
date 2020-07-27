@@ -91,24 +91,44 @@
         "level":"80%"
       },
       {
-        "name":"VueJs",
-        "level":"55%"
+        "name":"SQL",
+        "level":"80%"
       },
       {
-        "name":"ReactJs",
-        "level":"50%"
+        "name":"JavaScript",
+        "level":"80%"
+      },
+      {
+        "name":"HTML",
+        "level":"80%"
       },
       {
         "name":"CSS",
-        "level":"90%"
-      },
-      {
-        "name":"PHP",
         "level":"80%"
       },
       {
-        "name":"Java",
-        "level":"80%"
+        "name":"ReactJs",
+        "level":"70%"
+      },
+      {
+        "name":"C",
+        "level":"70%"
+      },
+      {
+        "name":"Haskell",
+        "level":"60%"
+      },
+      {
+        "name":"Bash",
+        "level":"60%"
+      },
+      {
+        "name":"MatLab",
+        "level":"60%"
+      },
+      {
+        "name":"Android Studio",
+        "level":"50%"
       }
     ]
   },
@@ -261,7 +281,7 @@
           " received the Gold CREST Award for my research into Robotics."
         ],
         "tags" : ["Python", "Robot Arm", "Internship"],
-        "image":"resume-website.jpg",
+        "image":"noimage.jpg",
         "url":""
       }
 

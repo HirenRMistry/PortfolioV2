@@ -41,13 +41,14 @@ class App extends Component {
 
   componentDidMount(){
     this.getResumeData();
+    console.log(this.state.resumeData.portfolio)
   }
 
   render() {
-    var test1 = this.state.resumeData.resume;
+    const test1 = this.state.resumeData.resume;
     var test2 = this.state.resumeData.portfolio;
     var test = {...test1, ...test2};
-    // console.log(this.state.resumeData)
+    // console.log( this.state.resumeData.resume)
     let unwrap2 = function({portfolio, resume}) { return { portfolio, resume}; };
     const {portfolio, resume, main} = this.state.resumeData
     const picked2 = {portfolio, resume}
@@ -55,13 +56,17 @@ class App extends Component {
 
     // const picked = (({"portfolio", "resume" }) => ({ "portfolio", "resume"}))(this.state.resumeData);
     // let unwrap = ({"portfolio", "resume"}) => ({'portfolio', 'resume'});
-
+    const dict = {};
+    dict.portfolio = this.state.resumeData.portfolio;
+    // dict.resume = this.state.resumeData.resume;
+    console.log();
     return (
+
       <div className="App">
         <Header data={this.state.resumeData.main}/>
         <About data={this.state.resumeData.main}/>
         <Portfolio data={this.state.resumeData.portfolio}/>
-        <Resume data={picked2}/>
+        <Resume data={this.state.resumeData.portfolio} data2={this.state.resumeData.resume}/>
         <Contact data={this.state.resumeData.main}/>
         <Footer data={this.state.resumeData.main}/>
       </div>

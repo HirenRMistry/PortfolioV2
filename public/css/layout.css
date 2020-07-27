@@ -257,7 +257,7 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
 }
 
 #resume .header-col { padding-top: 9px; }
-#resume .main-col { padding-right: 10%; }
+/* #resume .main-col { padding-right: 5%; } */
 
 .education, .work {
    margin-bottom: 48px;
@@ -278,6 +278,10 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
+#resume .twelve .columns .main-col p{
+  font: 15px/24px 'opensans-regular', sans-serif;
+  padding-bottom: 1200px!important;
+}
 
 /*----------------------------------------------*/
 /*	Skill Bars
@@ -288,20 +292,24 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
 	float: left;
 	padding: 0;
 	text-align: left;
+
 }
 .bars .skills {
   	margin-top: 36px;
    list-style: none;
+
+}
+.skills .progress{
+
 }
 .bars li {
    position: relative;
   	margin-bottom: 60px;
   	background: #333;
-  	height: 42px;
-  	border-radius: 0px;
-
-
-
+  	height: 25px;
+    width:100%;
+  	border-radius: 10px;
+    top:0px;
 }
 
 .bars li em {
@@ -309,9 +317,18 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
    color: #313131;
 	text-transform: uppercase;
    letter-spacing: 2px;
+	font-weight: bold;
+   position: relative;
+	top: -40px;
+}
+.bars li p{
+  font: 12px 'opensans', sans-serif;
+   color: #313131;
+   letter-spacing: 0.5px;
 	font-weight: normal;
    position: relative;
-	top: -36px;
+	  top: -40px;
+    padding-bottom: 5px!important;
 }
 .bar-expand {
    position: absolute;
@@ -322,9 +339,10 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
    padding-right: 24px;
   	background: #313131;
    display: inline-block;
-  	height: 42px;
+  	height: 25px;
    line-height: 42px;
-   border-radius: 0px;
+   border-radius: 10px;
+
 }
 /*
 .git {

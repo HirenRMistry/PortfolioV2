@@ -22,31 +22,41 @@ class Resume extends Component {
         duration : 2000
       });
     if(this.props.data){
-      console.log(this.props.data.skills);
+      console.log(this.props.data2);
       var skillmessage = this.props.data.skillmessage;
       var projects = this.props.data.projects
+      // var projectForSkill = '';
 
-      var skills = this.props.data.skills.map((skills)=>{
+      var skills = this.props.data2.skills.map((skills)=>{
         var className = 'bar-expand '+skills.name.toLowerCase();
-        var projectForSkill;
         // this.props.data.projects.map((proj)=>{
         //   console.log(proj);
         // })
-        console.log(skills)
+        // console.log(skills)
+        var projectForSkill = 'Projects: ';
+        var flag = false;
+        var projects = this.props.data.projects.map(function (p){
 
-        // var projects = this.props.data.projects.map(function (p){
-        //   if(p.tags.includes(skills)){
-        //     projectForSkill += p.title + ' ';
-        //   }
-        // });
-        // console.log(projectForSkill);
+          if(p.tags.includes(skills.name)){
+            if(!flag){
+              flag = true;
+            }
+            projectForSkill += p.title + ', ';
+          }
+        });
+        if (flag){
+          projectForSkill = projectForSkill.slice(0, -2);//Remove comma
+        }
+        console.log(projectForSkill);
 
 
           return (
             <li key={skills.name}>
+              <em>{skills.name}</em>
+              <p>{projectForSkill}</p>
 
-              <span data-aos="fade-right" style={{width:skills.level, backgroundColor:this.getRandomColor()}}className={className} ></span><em>{skills.name}</em>
 
+              <span data-aos="fade-right"  style={{width:skills.level, backgroundColor:this.getRandomColor()}}className={className} ></span>
             </li>
           )
 
@@ -63,10 +73,9 @@ class Resume extends Component {
             <h1><span>Skills</span></h1>
          </div>
 
-         <div className="nine columns main-col">
+         <div className="twelve columns main-col">
 
-            <p>{skillmessage}
-            </p>
+            <p>{skillmessage}</p>
 
 				<div className="bars">
           <div className="skillscontainer">

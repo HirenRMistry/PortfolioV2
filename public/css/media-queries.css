@@ -18,6 +18,14 @@
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
    }
+   .bars li em {
+     top:-50px;
+   }
+
+   .bars li p {
+     top: -50px;
+
+   }
 
 }
 
@@ -370,5 +378,6 @@
    /* social links */
    footer .social-links { font-size: 40px; }
    footer .social-links li { margin-left: 14px; }
+
 
 }
