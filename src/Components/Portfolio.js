@@ -118,7 +118,8 @@ class Portfolio extends Component {
                       <h5>{projects.title} </h5>
 
                       <h6>{projects.date}</h6>
-                      <p>{projects.category}</p>
+                      <p><i>{projects.category}</i></p>
+                      <p>{projects.one_line}</p>
                       <div className="tags">  {linkToProject}{items}   </div>
                     </div>
                   </div>

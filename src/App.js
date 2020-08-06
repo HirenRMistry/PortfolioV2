@@ -8,7 +8,7 @@ import About from './Components/About';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Portfolio from './Components/Portfolio';
-
+// import MapChart from './Components/MapChart';
 
 class App extends Component {
 
@@ -41,25 +41,10 @@ class App extends Component {
 
   componentDidMount(){
     this.getResumeData();
-    console.log(this.state.resumeData.portfolio)
   }
 
   render() {
-    const test1 = this.state.resumeData.resume;
-    var test2 = this.state.resumeData.portfolio;
-    var test = {...test1, ...test2};
-    // console.log( this.state.resumeData.resume)
-    let unwrap2 = function({portfolio, resume}) { return { portfolio, resume}; };
-    const {portfolio, resume, main} = this.state.resumeData
-    const picked2 = {portfolio, resume}
-    // let picked2 = unwrap2(this.state.resumeData)
 
-    // const picked = (({"portfolio", "resume" }) => ({ "portfolio", "resume"}))(this.state.resumeData);
-    // let unwrap = ({"portfolio", "resume"}) => ({'portfolio', 'resume'});
-    const dict = {};
-    dict.portfolio = this.state.resumeData.portfolio;
-    // dict.resume = this.state.resumeData.resume;
-    console.log();
     return (
 
       <div className="App">

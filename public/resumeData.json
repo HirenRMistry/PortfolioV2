@@ -107,7 +107,7 @@
         "level":"80%"
       },
       {
-        "name":"ReactJs",
+        "name":"ReactJS",
         "level":"70%"
       },
       {
@@ -137,22 +137,34 @@
       {
         "title":"Portfolio Website (V2)",
         "date": "July 2020",
-        "category":"A React based Portfolio Website",
-        "tags" : ["React", "HTML", "CSS", "Personal"],
+        "category":"Personal Project",
+        "one_line": "A React based Portfolio Website",
+        "tags" : ["ReactJS", "HTML", "CSS", "Personal", "JavaScript"],
         "image":"portfolioWebsiteV2master.jpg",
         "github": true,
         "url":"https://github.com/HirenRMistry/PortfolioWebsiteReact"
       },
       {
+        "title":"Angular Weather App",
+        "date": "June 2020",
+        "category":"Personal Project",
+        "one_line": "An Angular Based Weather App which uses the OpenWeather API to fetch weather data. Includes unit tests.",
+        "tags" : ["Angular", "HTML", "CSS", "Personal", "JavaScript"],
+        "image":"angularweatherapp.jpg",
+        "github": true,
+        "url":"https://github.com/HirenRMistry/angular-test"
+      },
+      {
         "title":"Derivative Trade Reporting & Analytical Tool",
         "date": "March 2020",
         "category":"Module: CS261 – Software Engineering",
+        "one_line":"A tool which uses machine learning to analyse and report derivative trade data. Part of 2nd Year Group Project.",
         "info":[
           "In this group project (Sponsored by Deutsche Bank), we were tasked with creating a derivative trade reporting and analytical tool.",
           "Our project was able to add, edit and delete derivate trade and currency data, in additon to using Machine Learning to find ‘fat-finger’ errors and other inconsistencies in the data over time.",
           "For this project, we used Python with the Flask Web framework along in combination with isolation forest used in the machine learning."
         ],
-        "tags" : ["Flask", "Year2", "Python"],
+        "tags" : ["Flask", "Year2", "Python", "Deutsche Bank"],
         "image":"cs261Trade.jpg",
         "github": false,
         "url":""
@@ -161,18 +173,20 @@
         "title":"Timetable Scheduler",
         "date": "January 2020",
         "category":"Module: CS255 – Artificial Intelligence",
+        "one_line":"Given a list of modules, tutors & constraints this project uses a backtracking algorithm to produce an accepted timetable.",
         "info":[
           "In this project, I created a Timetable Scheduler which will schedule a given a set of modules and lab sessions on weekdays with a given number of slots, ensuring the sessions are scheduled in the most cost-effective way.",
           "This is an example of a solution to a constraint satisfaction problem and uses backtracking in addition to a MRV ordering heuristic to find the best solution."
         ],
         "tags" : ["Artificial Intellgence", "Year2", "Python"],
         "image":"timetablescheduler.jpg",
-        "url":"http://www.hirenmistry.co.uk"
+        "url":""
       },
       {
         "title":"Multi-Threaded Packet Sniffer",
         "date": "December 2019",
         "category":"Module: CS241 – Computer Networks & Operating Systems",
+        "one_line":"A Packet sniffer which detects & analyses Ethernet, ARP, IPv4 and TCP packets whilst detecting intrusions such as SYN, ARP poisoning attacks and blacklisted URLs.",
         "info": [
           "In this task, I created a Packet sniffer that can detect and analyse Ethernet, ARP, IPv4 and TCP packets written in C. In addition, the program can also detect intrusions such as: SYN attacks, ARP poisoning and blacklisted URLs.",
           "Packets are analysed concurrently using a thread pool with a maximum of 10 threads."
@@ -185,6 +199,7 @@
         "title":"Department Store Database Analysis",
         "date": "December 2019",
         "category":"Module: CS258 – Database Systems",
+        "one_line": "A Database System for a fictional department store, able to store the inventory, orders, collections, deliveries and staff.",
         "info": [
           "In this task, I created a database system for a department store that stores the inventory, orders, collections, deliveries and staff.",
           "Using JDBC, the system allows staff to create in-store purchases, collections and deliveries, review the biggest selling products, calculate staff life-time success, staff contribution and candidates for employee of the year all using SQL queries.",
@@ -198,6 +213,7 @@
         "title":"Scratch Clone",
         "date": "March 2019",
         "category":"Module: CS141 - Functional Programming",
+        "one_line":"A project which evaluates statements & instructions and updates and returns the state to user. Uses Haskell - Functional Programming Language.",
         "info": [
           "This project involved writing a program in the functional programming language Haskell which evaluates statements and instructions, depending on the given state.",
           "The program then updates and returns the state to user. Input included assignment, if statements and instructions to retrieve data from memory.",
@@ -211,6 +227,7 @@
         "title":"Mastermind",
         "date": "February 2019",
         "category":"Module: CS141 - Functional Programming",
+        "one_line":"An implementation of Donald Knuth's Algorithm for the familiar Mastermind Game. Written in Haskell.",
         "info": [
           "This project involved writing specific functions in the Haskell to implement Donald Knuth's algorithm in the Mastermind game.",
           "This algorithm has the ability to solve any four character codes in under 5 guesses."
@@ -223,6 +240,8 @@
         "title":"Witter",
         "date": "March 2019",
         "category":"Module: CS126 - Design of Information Structures",
+        "one_line": "A project which simulates the functionality of Twitter and involved storing and retrieving users, ‘Weets’, and followers. Hash tables and adjacency matrices were used to store and retrieve the data, ensuring a fast and efficient process.",
+
         "info": [
           "This project simulated the basic functionality of Twitter and involved storing and retrieving users, ‘Weets’, and followers. ",
           "Hash tables and adjacency matrices were used to store and retrieve the data, ensuring a fast and efficient process."
@@ -235,6 +254,7 @@
         "title":"Maze 2",
         "date": "December 2018",
         "category":"Module: CS118 - Programming for Computer Scientists",
+        "one_line":"This task built on Maze 1 and required the robot to carry out a depth-first search in order to find the target. A stack was used to allow the robot to efficiently backtrack and find a correct route.",
         "info": [
           "This task built on Maze 1 and required the robot to carry out a depth-first search in order to find the target.",
           "I used a stack to allow the robot to efficiently backtrack and find a correct route.",
@@ -249,6 +269,7 @@
         "title":"Maze 1",
         "date": "October 2018",
         "category":"Module: CS118 - Programming for Computer Scientists",
+        "one_line": "This project allows a robot to navigate through a randomly generated maze. The robot needed to avoid crashing into walls and pick the correct route to move towards the target.",
         "info": [
           "In this project, I had to write a program in Java to navigate a robot through a randomly generated maze. ",
           "The robot needed to avoid crashing into walls and pick the correct route to move towards the target. ",
@@ -262,6 +283,7 @@
         "title":"Tic Tac Toe",
         "date": "May 2018",
         "category":"Personal",
+        "one_line": "A implementaion of the familiar game 'Noughts & Crosses' as an Android App. ",
         "info": [
           "In this project, I created the familiar game Tic TacToe in Android Studio using Java. ",
           "The app allows two users to play the game, alert the winner of the game, keep score of the game and allows the game to be reset. ",
@@ -275,6 +297,7 @@
         "title":"Nuffield Foundation Placement",
         "date": "August 2017",
         "category":"Internship",
+        "one_line":"A Research Placement by the Nuffield Foundation and the University of Northampton. My research involved learning how to use a Robot Arm using Python & developing a set of task for younger students to learn about programming.",
         "info": [
           "During the Summer, I took part in a Nuffield Foundation Research Placement, where I had to program a Robot Arm to carry out various movements in Python and designed an interactive set of tasks for younger students to learn about programming using this Robot Arm.",
           "Furthermore, I had to plan, prepare and deliver a presentation and report about my research project to a selection of Computer Science experts, which further developed my communication skills and self-confidence.",
