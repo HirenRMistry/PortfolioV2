@@ -8,7 +8,6 @@ import About from './Components/About';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Portfolio from './Components/Portfolio';
-// import MapChart from './Components/MapChart';
 
 class App extends Component {
 
@@ -53,6 +52,7 @@ class App extends Component {
         <Portfolio data={this.state.resumeData.portfolio}/>
         <Resume data={this.state.resumeData.portfolio} data2={this.state.resumeData.resume}/>
         <Contact data={this.state.resumeData.main}/>
+
         <Footer data={this.state.resumeData.main}/>
       </div>
 
