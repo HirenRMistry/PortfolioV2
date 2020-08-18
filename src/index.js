@@ -16,7 +16,7 @@ ReactDOM.render(
   <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App}/>
-        <Route path="/portfolio/:id" component={PortfolioItem}/>
+        <Route path="/:id" component={PortfolioItem}/>
       </Switch>
   </BrowserRouter>,
 
