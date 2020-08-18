@@ -1,6 +1,6 @@
 # React Portfolio Website
 
-## This is my Single-page Portfolio Website built using ReactJS, HTML, CSS & PHP.
+### This is my Single-page Portfolio Website built using ReactJS, HTML, CSS & PHP.
 
 
 #### This project uses the react particle background component library to create the full-page cobweb effect.
