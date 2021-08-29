@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ParticlesBg  from "particles-bg";
+import { Button } from '@chakra-ui/react';
 
-class Header extends Component {
+export default class Header extends Component {
 
   getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -17,16 +18,9 @@ class Header extends Component {
 
       var name = this.props.data.name;
       var description= this.props.data.description;
-      var welcome= this.props.data.welcome;
-
-      // var colorsLike = ["#4BD7CA", "#F4F7BF", "#03EB32", "#51ADC5", "#09D894", "#A8F505", "#2FE2BB"]
-      var color = this.getRandomColor();
-      console.log(color);
-      var backgroundDecison = [
-        <ParticlesBg type="cobweb" color = {color} bg={true} />,
-        <ParticlesBg type="lines"  bg={true} />
-      ];
-      var background = backgroundDecison[Math.floor(Math.random()*2)];
+      var linkedin = this.props.data.social[0];
+      var github = this.props.data.social[2];
+      var background = <ParticlesBg type="lines"  bg={true} />;
     }
 
     return (
@@ -51,9 +45,9 @@ class Header extends Component {
          <div className="banner-text">
             <h1 className="responsive-headline">{name}</h1>
             <h3>{description}</h3>
-            <p>{welcome}</p>
-            <hr />
-
+            {/* <hr />             */}
+            <a href={linkedin.url}><i className={linkedin.className} style={{fontSize: "25px", margin:"15px"}}></i></a>
+            <a href={github.url}><i className={github.className} style={{fontSize: "25px"}}></i></a>
          </div>
       </div>
 
@@ -66,4 +60,3 @@ class Header extends Component {
   }
 }
 
-export default Header;

@@ -1,64 +1,60 @@
-import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import $ from 'jquery';
-import './App.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Contact from './Components/Contact';
-import Portfolio from './Components/Portfolio';
+import React from 'react';
+import {
+  ChakraProvider,
+  Box,
+  Text,
+  Link,
+  VStack,
+  Code,
+  Grid,
+  theme,
+} from '@chakra-ui/react';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { Logo } from './Logo';
 
-class App extends Component {
+import Header from './components/Header';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-  constructor(props){
-    super(props);
-    this.state = {
-      foo: 'bar',
-      resumeData: {}
-    };
+import * as serviceWorker from "./serviceWorker";
 
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
+import Projects from './data/projects.json'
+import aboutMeInfo from './data/about.json'
 
-  }
-
-  getResumeData(){
-    $.ajax({
-      url:'./resumeData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
-
-  componentDidMount(){
-    this.getResumeData();
-  }
-
-  render() {
-
-    return (
-
-      <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Portfolio data={this.state.resumeData.portfolio}/>
-        <Resume data={this.state.resumeData.portfolio} data2={this.state.resumeData.resume}/>
-        <Contact data={this.state.resumeData.main}/>
-
-        <Footer data={this.state.resumeData.main}/>
-      </div>
-
-
-    );
-  }
+function App() {
+  return (
+    <ChakraProvider theme={theme}>
+      {/* <Box textAlign="center" fontSize="xl">
+        <Grid minH="100vh" p={3}>
+          <ColorModeSwitcher justifySelf="flex-end" />
+          <VStack spacing={8}>
+            <Logo h="40vmin" pointerEvents="none" />
+            <Text>
+              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
+            </Text>
+            <Link
+              color="teal.500"
+              href="https://chakra-ui.com"
+              fontSize="2xl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn Chakra
+            </Link>
+          </VStack>
+        </Grid>
+      </Box> */}
+      <Header data={aboutMeInfo}/>
+      <About data={aboutMeInfo}/>    
+      <Portfolio data={Projects}/>
+      <Contact data={aboutMeInfo}/>
+      <Footer data={aboutMeInfo}/>
+    </ChakraProvider>
+  );
 }
 
 export default App;
+serviceWorker.unregister();
+

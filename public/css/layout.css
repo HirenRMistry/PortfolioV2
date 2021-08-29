@@ -440,19 +440,40 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
    background: #ebeeee;
    padding-top: 90px;
    padding-bottom: 60px;
+   font: 'opensans-bold', sans-serif;
 }
-#portfolio h1 span {
+#portfolio .portfolioTitle h1 span {
   color: black;
    border-bottom: 3px solid #0762f9;
    padding-bottom: 6px;
 }
-#portfolio h1 {
+#portfolio .portfolioTitle h1 {
    font: 15px/24px 'opensans-semibold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
    margin-bottom: 48px;
    color: #95A3A3;
+}
+#portfolio .projectCard{
+   font: 15px/24px 'opensans-semibold', sans-serif;
+}
+
+#portfolio .projectCard h1{
+   text-transform: uppercase;
+   line-height: 20px;
+   color: black;
+}
+#portfolio .projectCard h2{
+   font: 13px/22px 'opensans-semibold', sans-serif;
+   font-style: italic; 
+}
+#portfolio .projectCard h3{
+   font: 12px/22px 'opensans', sans-serif;
+   font-style: italic; 
+}
+#portfolio .projectCard p{
+   font: 12px/21px 'opensans', sans-serif;
 }
 
 /* Portfolio Content */

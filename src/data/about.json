@@ -1,0 +1,53 @@
+{
+  "name":"Hiren Mistry",
+  "description":"Software Engineer @ BT",
+  "welcome":"",
+  "image":"me.jpg",
+  "bio1": "Hey!👋 My name is Hiren Mistry and I am a Computer Science Graduate from the University of Warwick.",
+  "bio2": "I enjoy solving real life and commercial problems, finding fast and efficient solutions to complex challenges. I have experience in designing and developing programs in an array of languages, including Java, Python and HTML. Previous personal and university projects include web design, APIs, object-orientated programming and mobile applications.",
+  "bio3": "Studying at the University of Warwick has strengthened my problem-solving skills and core understanding in order to produce high-quality algorithms and programs. Learning the fundamental principles of program design and information structures has ensured programs are fully optimized, with a fast user-experience.",
+  "bio4": "I regularly keep up to date with the latest developments in Science and Technology and am passionate as to what the future of this developing field will bring to the world.",
+  "bio5" : "Aside from software development, I regularly play Badminton and Basketball both competitively and socially.",
+  "bio6" : "As an avid traveller, I have visited over 20 countries so far and would love to  ",
+  "bio_length": 5,
+  "bio":[
+    "👋 Hey! My name is Hiren Mistry.",
+    "🎓 Computer Science Graduate from the University of Warwick.",
+    "📚 Enjoy solving real life and commercial problems, finding fast & efficient solutions to complex challenges.", 
+    "🛠️ Previous personal/university projects include web design, APIs, object-orientated programming & mobile applications.",
+    "🧰 Most experienced with Java, Python & JavaScript.",
+    "🏸 Badminton and Basketball Player.",
+    "🌎 Avid traveller, visited over 20 countries (& counting!)"
+  ],
+  "contactmessage":"If you have any questions, please feel free to get in touch!",
+  "website": "http://www.hirenmsitry.com",
+  "social":[
+    {
+      "name":"linkedin",
+      "url":"https://www.linkedin.com/in/hiren-mistry17/",
+      "className":"fa fa-linkedin"
+    },
+    {
+      "name":"instagram",
+      "url":"https://www.instagram.com/hiren_mistry17/",
+      "className":"fa fa-instagram"
+    },
+    {
+      "name":"github",
+      "url":"https://github.com/HirenRMistry",
+      "className":"fa fa-github"
+    },
+    {
+      "name":"email",
+      "url":"mailto:contact@hirenmistry.co.uk",
+      "className":"fa fa-envelope"
+    },
+    {
+      "name":"Tes Shop",
+      "url":"https://www.tes.com/teaching-resources/shop/hiren2017",
+      "className":"fa fa-book"
+    }
+  ],
+  "skillmessage":"Here are some of my skills and their proficiency. Click on a project name for more infomation."
+
+}

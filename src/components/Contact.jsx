@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button } from '@chakra-ui/react';
 class Contact extends Component {
   render() {
 
@@ -44,11 +44,11 @@ class Contact extends Component {
 
                   <div>
                      <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                     <textarea cols="50" rows="8" id="contactMessage" name="contactMessage"></textarea>
                   </div>
 
                   <div>
-                     <button className="submit">Submit</button>
+                     <Button size="lg" padding="10px" borderRadius="lg" colorScheme="blackAlpha" className="submit">Submit</Button>
                      <span id="image-loader">
                         <img alt="" src="images/loader.gif" />
                      </span>

@@ -1,0 +1,33 @@
+{
+    "ReactJS": "#61dafb", 
+    "HTML": "#00008b",
+    "CSS": "#FFA500",
+    "JavaScript": "#8b0000",
+    "Python": "#3776a0",
+    "Angular": "#3f51b5",
+    "Flask": "#3776a0",
+    "Artificial Intellgence": "",
+    "Hadoop": "#32a899",
+    "MapReduce": "#32a899",
+    "Android Studio": "#a4c639",
+    "C": "#e6710b",
+    "C++": "#e6710b",
+    "WebGL": "#199908",
+    "SQL": "#fced14",
+    "Java": "#a31c1c",
+    "javacc": "#a31c1d",
+    "Haskell": "#800080",
+    "Functional": "",
+    "Personal": "",
+    "Year1": "",
+    "Year2": "",
+    "Year3": "",
+    "DFS": "",
+    "Robot Arm": "",
+    "Internship": "",
+    "Deutsche Bank": "",
+    "default": "#000"
+}
+
+
+
