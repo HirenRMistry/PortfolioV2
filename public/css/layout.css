@@ -299,9 +299,7 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
    list-style: none;
 
 }
-.skills .progress{
 
-}
 .bars li {
    position: relative;
   	margin-bottom: 60px;
@@ -703,12 +701,12 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
 } */
 
 .projlink {
-  font-size: 30px!important;
   padding: 5px;
-  color:white;
-  text-align: right!important;
-  right:10px!important;
-  display:inline-block;
+  color:black;
+  /* text-align: right!important; */
+}
+.github{
+   font-size: 30px;
 }
 .projlink:hover{
   border-radius: 30px;
@@ -1066,8 +1064,8 @@ call-to-action .button {
 
 footer {
    padding-top: 48px;
-   margin-bottom: 48px;
-   color: #303030;
+   /* margin-bottom: 48px; */
+   background-color: #303030;
    font-size: 14px;
    text-align: center;
    position: relative;
@@ -1080,6 +1078,7 @@ footer a:hover, footer a:focus { color: #fff; }
 footer .copyright {
     margin: 0;
     padding: 0;
+    color: white;
  }
 footer .copyright li {
     display: inline-block;

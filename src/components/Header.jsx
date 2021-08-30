@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-import ParticlesBg  from "particles-bg";
-import { Button } from '@chakra-ui/react';
-
+import ParticlesBg  from 'particles-bg';
 export default class Header extends Component {
 
-  getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
   render() {
 
     if(this.props.data){
-
       var name = this.props.data.name;
       var description= this.props.data.description;
       var linkedin = this.props.data.social[0];
       var github = this.props.data.social[2];
       var background = <ParticlesBg type="lines"  bg={true} />;
+    }
+
+    var socialsStyle = {
+      fontSize: "25px", 
+      margin:"15px", 
+      color: '#11ABB0'
     }
 
     return (
@@ -34,7 +29,7 @@ export default class Header extends Component {
             <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
             <li><a className="smoothscroll" href="#about">About</a></li>
             <li><a className="smoothscroll" href="#portfolio">Portfolio</a></li>
-            <li><a className="smoothscroll" href="#resume">Skills</a></li>
+            {/* <li><a className="smoothscroll" href="#resume">Skills</a></li> */}
             <li><a className="smoothscroll" href="#contact">Contact</a></li>
 
          </ul>
@@ -46,8 +41,8 @@ export default class Header extends Component {
             <h1 className="responsive-headline">{name}</h1>
             <h3>{description}</h3>
             {/* <hr />             */}
-            <a href={linkedin.url}><i className={linkedin.className} style={{fontSize: "25px", margin:"15px"}}></i></a>
-            <a href={github.url}><i className={github.className} style={{fontSize: "25px"}}></i></a>
+            <a href={linkedin.url}><i className={linkedin.className} style={socialsStyle}></i></a>
+            <a href={github.url}><i className={github.className} style={socialsStyle}></i></a>
          </div>
       </div>
 
