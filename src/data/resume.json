@@ -1,0 +1,16 @@
+[
+    {
+        "position": "Backend Developer Intern",
+        "company": "HandsIn",
+        "location": "Remote",
+        "date": "Jul 2021 - Aug 2021",
+        "desc": 
+        [
+            "Creation of a WebSocket Server for use with the Frontend system.",
+            "Validation of group payments and integration of backend system with Frontend user interface.",
+            "Use of Amazon DynamoDB for storing group payments, groups, and users.",
+            "Creation of login & authentication for users of the merchant dashboard."
+        ],
+        "tags": ["ReactJS","JavaScript", "TypeScript", "HTML", "CSS"]
+    }
+]
