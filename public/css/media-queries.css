@@ -9,6 +9,11 @@
 
 /* screenwidth less than 1024px
 --------------------------------------------------------------------- */
+
+.tag a:visited {
+   color: white !important;
+}
+
 @media only screen and (max-width: 1024px) {
 
     /* header styles
@@ -67,7 +72,7 @@
 
    /* Resume Section
    ------------------------------------------------------------------- */
-   #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
+   #resume h1 { font: 16px/24px 'opensans-bold', sans-serif;}
    #resume .main-col { padding-right: 5%; }
 
    /* Testimonials Section
@@ -242,7 +247,7 @@
    }
    #resume h1 { letter-spacing: 3px; }
    #resume .main-col { padding-right: 30px; }
-   #resume h3, #resume .info { text-align: center; }
+   #resume h3, #resume .info { text-align: center;}
 
    .bars { width: 100%; }
 

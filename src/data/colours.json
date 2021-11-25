@@ -26,7 +26,12 @@
     "Robot Arm": "",
     "Internship": "",
     "Deutsche Bank": "",
-    "default": "#000"
+    "TypeScript": "#3178c6",
+    "C#": "#800087",
+    "default": "#000",
+    "AWS": "#FF9900",
+    "PostgreSQL": "#4269f5",
+    "Robot-Framework": "#00c0b5"
 }
 
 

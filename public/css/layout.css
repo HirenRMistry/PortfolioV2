@@ -240,8 +240,9 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
    overflow: hidden;
 }
 
-#resume a, #resume a:visited  { color: #0762f9; }
-#resume a:hover, #resume a:focus { color: #313131; }
+.vertical-timeline-element-date {
+   font-size: 15px!important;
+}
 
 #resume h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
@@ -668,7 +669,7 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
   display: inline-block;
   border-radius: 5px;
   padding:2px;
-  margin: 5px!important;
+  margin: 2px!important;
   padding:5px;
   color: white!important;
   font-weight: bold!important;
@@ -686,10 +687,15 @@ ul#nav li.current a { color: #fe6928; border-bottom: 1px solid #fe6928}
   border-color: white!important;
   border-width: 2px!important;
 }
-.tag:hover{
+/* .tag:hover{
   background-color: white;
   color:black!important;
 }
+.tag a:visited {
+   color: white !important;
+   color:black!important;
+
+} */
 /* .TagReact{
   background-color: red;
 }

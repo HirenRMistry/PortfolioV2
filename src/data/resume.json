@@ -1,5 +1,16 @@
 [
     {
+        "position": "Software Engineer",
+        "company": "BT",
+        "location": "London",
+        "date": "Sep 2021 - Present",
+        "desc": 
+        [
+            
+        ],
+        "tags": ["Python", "ReactJS","JavaScript", "C#", "PostgreSQL"]
+    },
+    {
         "position": "Backend Developer Intern",
         "company": "HandsIn",
         "location": "Remote",
