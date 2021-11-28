@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import colours from '../data/colours.json';
+import colours from '../../data/colours.json';
 import {Tag} from '@chakra-ui/react';
 
 

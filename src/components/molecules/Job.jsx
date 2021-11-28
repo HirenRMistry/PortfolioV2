@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { VerticalTimelineElement}  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import {FaBriefcase, FaChevronDown} from 'react-icons/fa';
-import TechTag from './TechTag';
+import TechTag from '../atoms/TechTag';
 
 export default class Job extends Component {
     constructor(props) {

@@ -4,18 +4,20 @@ import {
   theme,
 } from '@chakra-ui/react';
 
-import Header from './components/Header';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from './components/sections/Header';
+import About from './components/sections/About';
+import Portfolio from './components/sections/Portfolio';
+import Resume from './components/sections/Resume';
+import Contact from './components/sections/Contact';
+import Footer from './components/sections/Footer';
+import Skills from './components/sections/Skills';
 
 import * as serviceWorker from "./serviceWorker";
 
 import Projects from './data/projects.json'
 import aboutMeInfo from './data/about.json'
 import resumeInfo from './data/resume.json'
+import skills from './data/skills.json'
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
       <About data={aboutMeInfo}/>    
       <Portfolio data={Projects}/>
       <Resume data={resumeInfo}/>
+      <Skills data={skills}/>
       <Contact data={aboutMeInfo}/>
       <Footer data={aboutMeInfo}/>
     </ChakraProvider>

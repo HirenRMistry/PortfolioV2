@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {HStack} from '@chakra-ui/react';
-import TechTag from './TechTag';
+import TechTag from '../atoms/TechTag';
 
 export default class ProjectCard extends Component {
 

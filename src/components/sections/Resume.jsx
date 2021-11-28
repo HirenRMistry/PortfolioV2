@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Job from './Job';
+import Job from '../molecules/Job';
 import { VerticalTimeline}  from 'react-vertical-timeline-component';
 
 export default class Resume extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'aos/dist/aos.css';
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../molecules/ProjectCard';
 import { SimpleGrid } from '@chakra-ui/layout';
 import { Button } from '@chakra-ui/react';
 
