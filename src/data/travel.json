@@ -1,8 +1,42 @@
-[
-    {
-        "name": "Punta Cana",
-        "country": "Dominian Republic",
-        "position": [18.5601, -68.3725]
-
-    }
-]
+{
+    "center":[51.505, -0.09],
+    "continents": [
+        "North America",
+        "Africa",
+        "Asia",
+        "South America",
+        "Europe",
+        "Australia"
+    ],
+    "attribution":"&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+    "url":"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "places": [
+        {
+            "name": "Punta Cana",
+            "continent": "North America",
+            "country": "Dominian Republic",
+            "position": [
+                18.5601,
+                -68.3725
+            ]
+        },
+        {
+            "name": "Paris",
+            "continent": "Europe",
+            "country": "France",
+            "position": [
+                48.8566,
+                2.3522
+            ]
+        },
+        {
+            "name": "Mombasa",
+            "continent": "Africa",
+            "country": "Kenya",
+            "position": [
+                -0.0236,
+                37.9062
+            ]
+        }
+    ]
+}

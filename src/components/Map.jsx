@@ -1,63 +1,55 @@
 import React, { Component } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
-
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-
-let DefaultIcon = L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow,
-  iconAnchor: [10, 41],
-  popupAnchor: [2, -40],
-
-
-});
-
-// L.Marker.prototype.options.icon = DefaultIcon;
+import MarkerPopup from './MarkerPopup';
+import createClass from './HelperFunctions';
 
 
 export default class Map extends Component {
 
   render() {
     if (this.props.data) {
-      var places = this.props.data;
+      var { places, continents, center, attribution, url } = this.props.data;
     }
+    continents.forEach((continent, i) =>
+      createClass(`.${continent.replace(" ", "")}Icon`, `filter: hue-rotate(${i * 45}deg)`)
+    );
 
     var titleContainer = {
       textAlign: 'center',
       marginBottom: '30px',
       paddingTop: '90px'
-    };
-    var titleStyle = {
-      borderBottom: '3px solid #013220',
-      padding: '3px',
-      letterSpacing: '3px',
-      textTransform: 'uppercase'
-    }
+    },
+      titleStyle = {
+        borderBottom: '3px solid #013220',
+        padding: '3px',
+        letterSpacing: '3px',
+        textTransform: 'uppercase'
+      },
+      mapContainerStyle = {
+        height: '90vh',
+        width: '90wh',
+        margin: "45px",
+        zIndex: 1
+      }
 
     return (
+
       <section id="map">
+
         <div style={titleContainer}>
           <h1><span style={titleStyle}>Travel</span></h1>
         </div>
-        <div >
+
+        <div>
           <MapContainer
-            style={{ height: '90vh', width: '90wh', margin: "40px" }}
-            center={[51.505, -0.09]} zoom={3} scrollWheelZoom={false}>
+            style={mapContainerStyle}
+            center={center} zoom={3} scrollWheelZoom={false}>
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution={attribution}
+              url={url}
             />
-            {places.map(p => (
-              <Marker position={p.position} icon={DefaultIcon}>
-                <Popup>
-                  <h1 style={{paddingBottom:'1px', textAlign:'center'}}>{p.name}</h1>
-                  <p style={{margin:'1px 0'}}>{p.country}</p>
-                </Popup>
-              </Marker>
-            ))}
+            {places.map(place => <MarkerPopup place={place} />)}
           </MapContainer>
 
         </div>
@@ -65,4 +57,5 @@ export default class Map extends Component {
     );
   }
 }
+//https://codesandbox.io/s/create-simple-map-highlight-regions-custom-colors-6cl66?from-embed=&file=/src/App.tsx
 
