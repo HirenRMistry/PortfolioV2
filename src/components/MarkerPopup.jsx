@@ -14,21 +14,23 @@ function createIcon(continent) {
   });
 }
 
-const MarkerPopup = ({ place: { position, continent, name, country } }) => {
+const MarkerPopup = ({ place: { position, continent, name, country,year } }) => {
   var popupStyle = {
     margin: '1px 0',
     paddingBottom: '1px',
     textAlign: 'center'
   };
-
-  return (
-    <Marker position={position} icon={createIcon(continent)}>
+console.log(position)
+  var result = name.map((n, i) => (
+    <Marker position={position[i]} icon={createIcon(continent)}>
       <Popup>
-        <h1 style={popupStyle}>{name.toUpperCase()}</h1>
-        <p style={popupStyle}>{country}</p>
+        <h1 style={popupStyle}>{n.toUpperCase()}</h1>
+        <p style={popupStyle}>{country.length > 1? country[i]:country[0]} ({year})</p>
       </Popup>
     </Marker>
-  )
+  ))
+
+  return result
 
 }
 

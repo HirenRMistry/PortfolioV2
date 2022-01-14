@@ -1,41 +1,534 @@
 {
-    "center":[51.505, -0.09],
+    "center": [
+        51.505,
+        -0.09
+    ],
     "continents": [
         "North America",
         "Africa",
-        "Asia",
         "South America",
+        "Australia",
         "Europe",
-        "Australia"
+        "Asia"
     ],
-    "attribution":"&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
-    "url":"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+    "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     "places": [
         {
-            "name": "Punta Cana",
+            "name": [
+                "Punta Cana"
+            ],
             "continent": "North America",
-            "country": "Dominian Republic",
+            "country": [
+                "Dominian Republic"
+            ],
+            "year": 2021,
             "position": [
-                18.5601,
-                -68.3725
+                [
+                    18.5601,
+                    -68.3725
+                ]
             ]
         },
         {
-            "name": "Paris",
+            "name": [
+                "Lake District"
+            ],
             "continent": "Europe",
-            "country": "France",
+            "country": [
+                "UK"
+            ],
+            "year": 2021,
             "position": [
-                48.8566,
-                2.3522
+                [
+                    54.5772,
+                    -2.7975
+                ]
             ]
         },
         {
-            "name": "Mombasa",
-            "continent": "Africa",
-            "country": "Kenya",
+            "name": [
+                "Columbo",
+                "Sigiriya",
+                "Kandy",
+                "Negombo"
+            ],
+            "continent": "Asia",
+            "country": [
+                "Sri Lanka"
+            ],
+            "year": 2019,
             "position": [
-                -0.0236,
-                37.9062
+                [
+                    6.9271,
+                    79.8612
+                ],
+                [
+                    7.95416,
+                    80.75583
+                ],
+                [
+                    7.2906,
+                    80.6337
+                ],
+                [
+                    7.2008,
+                    79.8737
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Brussels"
+            ],
+            "continent": "Europe",
+            "country": [
+                "Belgium"
+            ],
+            "year": 2019,
+            "position": [
+                [
+                    50.5039,
+                    4.4699
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Stavanger",
+                "Olden",
+                "Alesend",
+                "Bergen"
+            ],
+            "continent": "Europe",
+            "country": [
+                "Norway"
+            ],
+            "year": 2018,
+            "position": [
+                [
+                    58.9700,
+                    5.7331
+                ],
+                [
+                    61.8350,
+                    6.8066
+                ],
+                [
+                    62.4722,
+                    6.1495
+                ],
+                [
+                    60.3913,
+                    5.3221
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Mombasa",
+                "Nairobi"
+            ],
+            "continent": "Africa",
+            "year": 2017,
+            "country": [
+                "Kenya"
+            ],
+            "position": [
+                [
+                    -0.0236,
+                    37.9062
+                ],
+                [
+                    -1.2921,
+                    36.8219
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Aghios Nikolaos",
+                "Mykonos",
+                "Piraeus",
+                "Katakolon",
+                "Corfu"
+            ],
+            "continent": "Europe",
+            "year": 2017,
+            "country": [
+                "Greece"
+            ],
+            "position": [
+                [
+                    35.1900,
+                    25.7164
+                ],
+                [
+                    37.4467,
+                    25.3289
+                ],
+                [
+                    37.9430,
+                    23.6470
+                ],
+                [
+                    37.6463,
+                    21.3171
+                ],
+                [
+                    39.6243,
+                    19.9217
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Kerala"
+            ],
+            "continent": "Asia",
+            "year": 2017,
+            "country": [
+                "India"
+            ],
+            "position": [
+                [
+                    10.8505,
+                    76.2711
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Madrid"
+            ],
+            "continent": "Europe",
+            "year": 2016,
+            "country": [
+                "Spain"
+            ],
+            "position": [
+                [
+                    40.4168,
+                    -3.7038
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Koper",
+                "Venice",
+                "Split",
+                "Dubrovnik",
+                "Koto"
+            ],
+            "continent": "Europe",
+            "year": 2016,
+            "country": [
+                "Slovenia",
+                "Italy",
+                "Croatia",
+                "Croatia",
+                "Montenegro"
+            ],
+            "position": [
+                [
+                    45.5481,
+                    13.7302
+                ],
+                [
+                    45.4408,
+                    12.3155
+                ],
+                [
+                    43.5081,
+                    16.4402
+                ],
+                [
+                    42.6507,
+                    18.0944
+                ],
+                [
+                    42.4247,
+                    18.7712
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Elba",
+                "Livorno",
+                "Cannes",
+                "Sete",
+                "Barcelona"
+            ],
+            "continent": "Europe",
+            "year": 2015,
+            "country": [
+                "Italy",
+                "Italy",
+                "France",
+                "France",
+                "Spain"
+            ],
+            "position": [
+                [
+                    42.7782,
+                    10.1927
+                ],
+                [
+                    43.5485,
+                    10.3106
+                ],
+                [
+                    43.5528,
+                    7.0174
+                ],
+                [
+                    43.4079,
+                    3.7008
+                ],
+                [
+                    41.3874,
+                    2.1686
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Paris"
+            ],
+            "continent": "Europe",
+            "year": 2015,
+            "country": [
+                "France"
+            ],
+            "position": [
+                [
+                    48.8566,
+                    2.3522
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Dehli",
+                "Agra",
+                "Jaipur"
+            ],
+            "continent": "Asia",
+            "year": 2015,
+            "country": [
+                "India"
+            ],
+            "position": [
+                [
+                    28.7041,
+                    77.1025
+                ],
+                [
+                    27.1767,
+                    78.0081
+                ],
+                [
+                    26.9124,
+                    75.7873
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Toronto",
+                "Ottawa",
+                "Montreal"
+            ],
+            "continent": "North America",
+            "year": 2014,
+            "country": [
+                "Canada"
+            ],
+            "position": [
+                [
+                    43.6532,
+                    -79.3832
+                ],
+                [
+                    45.4215,
+                    -75.6972
+                ],
+                [
+                    45.5017,
+                    -73.5673
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Valleta",
+                "Sicily",
+                "Civitavecchia",
+                "Naples",
+                "Messina"
+            ],
+            "continent": "Europe",
+            "year": 2013,
+            "country": [
+                "Malta",
+                "Italy",
+                "Italy",
+                "Italy",
+                "Italy"
+            ],
+            "position": [
+                [
+                    35.9375,
+                    14.3754
+                ],
+                [
+                    37.6000,
+                    14.0154
+                ],
+                [
+                    42.0924,
+                    11.7954
+                ],
+                [
+                    40.8518,
+                    14.2681
+                ],
+                [
+                    38.1937,
+                    15.5542
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Hersonissos"
+            ],
+            "continent": "Europe",
+            "year": 2012,
+            "country": [
+                "Greece"
+            ],
+            "position": [
+                [
+                    35.3073,
+                    25.3702
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Cairo"
+            ],
+            "continent": "Africa",
+            "year": 2010,
+            "country": [
+                "Egypt"
+            ],
+            "position": [
+                [
+                    30.0444,
+                    31.2357
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Paphos"
+            ],
+            "continent": "Europe",
+            "year": 2009,
+            "country": [
+                "Cyprus"
+            ],
+            "position": [
+                [
+                    34.7720,
+                    32.4297
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Malaga"
+            ],
+            "continent": "Europe",
+            "year": 2008,
+            "country": [
+                "Spain"
+            ],
+            "position": [
+                [
+                    36.7212, 4.4217
+
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Sarigerme"
+            ],
+            "continent": "Europe",
+            "year": 2007,
+            "country": [
+                "Turkey"
+            ],
+            "position": [
+                [
+                    36.7100, 28.7019
+
+
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Dubai"
+            ],
+            "continent": "Asia",
+            "year": 2006,
+            "country": [
+                "UAE"
+            ],
+            "position": [
+                [
+                    25.2048, 55.2708
+                ]
+            ]
+        },
+        {
+            "name": [
+                "New York"
+            ],
+            "continent": "North America",
+            "year": 2006,
+            "country": [
+                "USA"
+            ],
+            "position": [
+                [
+                    40.7128, -74.0060
+
+
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Orlando"
+            ],
+            "continent": "North America",
+            "year": 2005,
+            "country": [
+                "USA"
+            ],
+            "position": [
+                [
+                    28.5384, -81.3789
+
+
+                ]
             ]
         }
     ]

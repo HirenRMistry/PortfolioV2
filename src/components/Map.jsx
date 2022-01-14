@@ -12,7 +12,7 @@ export default class Map extends Component {
       var { places, continents, center, attribution, url } = this.props.data;
     }
     continents.forEach((continent, i) =>
-      createClass(`.${continent.replace(" ", "")}Icon`, `filter: hue-rotate(${i * 45}deg)`)
+      createClass(`.${continent.replace(" ", "")}Icon`, `filter: hue-rotate(${(i) * 45}deg)`)
     );
 
     var titleContainer = {
