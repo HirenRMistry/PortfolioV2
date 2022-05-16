@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "title": "Wordle Clone",
+      "date": "January 2022",
+      "category":"Personal Project",
+      "one_line": "Created a clone of the game Wordle. My clone allows users to guess words of length 4-7.",
+      "tags" : ["Personal", "ReactJS", "JavaScript"],
+      "url": "https://wordle.hirenmistry.co.uk/"
+    },
+    {
       "title": "Chat Application",
       "date": "November 2021",
       "category":"Personal Project",

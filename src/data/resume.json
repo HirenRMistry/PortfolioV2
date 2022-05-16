@@ -3,12 +3,12 @@
         "position": "Software Engineer",
         "company": "BT",
         "location": "London",
-        "date": "Sep 2021 - Present",
+        "date": "Sep 2021 - July 2021",
         "desc": 
         [
             
         ],
-        "tags": ["Python", "ReactJS","JavaScript", "C#", "PostgreSQL", "Go"]
+        "tags": ["Python","Powershell", "Go"]
     },
     {
         "position": "Backend Developer Intern",

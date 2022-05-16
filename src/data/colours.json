@@ -32,7 +32,8 @@
     "AWS": "#FF9900",
     "PostgreSQL": "#4269f5",
     "Robot-Framework": "#00c0b5",
-    "Go": "#007d9c"
+    "Go": "#007d9c",
+    "Powershell":"#0078d4"
 }
 
 
