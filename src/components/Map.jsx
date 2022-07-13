@@ -6,7 +6,7 @@ import createClass from './HelperFunctions';
 
 
 export default class Map extends Component {
-
+//Clear cache in node and npm install
   render() {
     if (this.props.data) {
       var { places, continents, center, attribution, url } = this.props.data;
