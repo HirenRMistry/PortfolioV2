@@ -1,0 +1,10 @@
+#PortfolioPage{
+  background-color: white;
+  padding:15px;
+  font: 18px/1.9em 'opensans', sans-serif;
+  height:100vh;
+  width:100%
+}
+#PortfolioPage h1{
+  text-align: center;
+}
