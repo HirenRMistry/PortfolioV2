@@ -1,58 +1,55 @@
 import React, { Component } from 'react';
-import ParticlesBg  from 'particles-bg';
+import ParticlesBg from 'particles-bg';
 export default class Header extends Component {
 
-  render() {
+   render() {
 
-    if(this.props.data){
-      var name = this.props.data.name;
-      var description= this.props.data.description;
-      var linkedin = this.props.data.social[0];
-      var github = this.props.data.social[2];
-      var background = <ParticlesBg type="lines"  bg={true} />;
-    }
+      if (this.props.data) {
+         var { name, description, social: [linkedin, , github] } = this.props.data
 
-    var socialsStyle = {
-      fontSize: "25px", 
-      margin:"15px", 
-      color: '#11ABB0'
-    }
+         var background = <ParticlesBg type="lines" bg={true} />;
+      }
 
-    return (
-      <header id="home">
-      {background}
-      <nav id="nav-wrap">
-         <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
+      var socialsStyle = {
+         fontSize: "25px",
+         margin: "15px",
+         color: '#11ABB0'
+      }
 
-         <ul id="nav" className="nav">
-            <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-            <li><a className="smoothscroll" href="#about">About</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Portfolio</a></li>
-            <li><a className="smoothscroll" href="#resume">Experience</a></li>
-            <li><a className="smoothscroll" href="#map">Travel</a></li>
-            <li><a className="smoothscroll" href="#contact">Contact</a></li>
+      return (
+         <header id="home">
+            {background}
+            <nav id="nav-wrap">
+               <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+               <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
-         </ul>
-      </nav>
+               <ul id="nav" className="nav">
+                  <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
+                  <li><a className="smoothscroll" href="#about">About</a></li>
+                  <li><a className="smoothscroll" href="#portfolio">Portfolio</a></li>
+                  <li><a className="smoothscroll" href="#resume">Experience</a></li>
+                  <li><a className="smoothscroll" href="#map">Travel</a></li>
+                  <li><a className="smoothscroll" href="#contact">Contact</a></li>
 
-      <div className="row banner">
+               </ul>
+            </nav>
 
-         <div className="banner-text">
-            <h1 className="responsive-headline">{name}</h1>
-            <h3>{description}</h3>
-            {/* <hr />             */}
-            <a href={linkedin.url}><i className={linkedin.className} style={socialsStyle}></i></a>
-            <a href={github.url}><i className={github.className} style={socialsStyle}></i></a>
-         </div>
-      </div>
+            <div className="row banner">
 
-      <p className="scrolldown">
-         <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-      </p>
+               <div className="banner-text">
+                  <h1 className="responsive-headline">{name}</h1>
+                  <h3>{description}</h3>
+                  {[linkedin, github].map(({url, className}) => <a href={url}><i className={className} style={socialsStyle}></i></a>)}
+               </div>
+            
+            </div>
 
-   </header>
-    );
-  }
+            <p className="scrolldown">
+               <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
+            </p>
+
+         </header>
+      );
+   }
 }
 

@@ -4,7 +4,7 @@ import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-function createIcon(continent) {
+const createIcon = (continent) => {
   return L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
@@ -14,23 +14,24 @@ function createIcon(continent) {
   });
 }
 
-const MarkerPopup = ({ place: { position, continent, name, country,year } }) => {
+const MarkerPopup = ({ place: { position, continent, name, country, year } }) => {
+
   var popupStyle = {
     margin: '1px 0',
     paddingBottom: '1px',
     textAlign: 'center'
   };
-console.log(position)
-  var result = name.map((n, i) => (
+
+  var markers = name.map((name, i) => (
     <Marker position={position[i]} icon={createIcon(continent)}>
       <Popup>
-        <h1 style={popupStyle}>{n.toUpperCase()}</h1>
-        <p style={popupStyle}>{country.length > 1? country[i]:country[0]} ({year})</p>
+        <h1 style={popupStyle}>{name.toUpperCase()}</h1>
+        <p style={popupStyle}>{country.length > 1 ? country[i] : country[0]} ({year})</p>
       </Popup>
     </Marker>
   ))
 
-  return result
+  return markers
 
 }
 

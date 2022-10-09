@@ -16,6 +16,22 @@
     "places": [
         {
             "name": [
+                "Lisbon"
+            ],
+            "continent": "Europe",
+            "country": [
+                "Portugal"
+            ],
+            "year": 2022,
+            "position": [
+                [
+                    38.7223, 
+                    -9.1393
+                ]
+            ]
+        },
+        {
+            "name": [
                 "Punta Cana"
             ],
             "continent": "North America",

@@ -6,15 +6,25 @@ import createClass from './HelperFunctions';
 
 
 export default class Map extends Component {
-//Clear cache in node and npm install
+  //Clear cache in node and npm install
   render() {
     if (this.props.data) {
       var { places, continents, center, attribution, url } = this.props.data;
     }
     continents.forEach((continent, i) =>
-      createClass(`.${continent.replace(" ", "")}Icon`, `filter: hue-rotate(${(i) * 45}deg)`)
+      createClass(`.${continent.replace(" ", "")}Icon`, `filter: hue-rotate(${(i + 20) * 45}deg)`)
     );
 
+    var numOfCountries = new Set();
+    var numOfContinents = new Set();
+    places.map(({ country, continent }) => {
+      country.map(c => numOfCountries.add(c))
+      numOfContinents.add(continent);
+      return null
+    });
+    console.log(numOfCountries)
+
+    //Styling
     var titleContainer = {
       textAlign: 'center',
       marginBottom: '30px',
@@ -39,6 +49,7 @@ export default class Map extends Component {
 
         <div style={titleContainer}>
           <h1><span style={titleStyle}>Travel</span></h1>
+          <h2>{numOfCountries.size} Countries | {numOfContinents.size} Continents</h2>
         </div>
 
         <div>

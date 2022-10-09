@@ -1,14 +1,30 @@
 [
     {
         "position": "Software Engineer",
-        "company": "BT",
+        "company": "Amazon",
         "location": "London",
-        "date": "Sep 2021 - Present",
+        "date": "August 2022 - Present",
         "desc": 
         [
-            
+            "Prime Video iOS Team"
         ],
-        "tags": ["Python", "ReactJS","JavaScript", "C#", "PostgreSQL"]
+        "tags": ["Swift", "JavaScript"]
+    },
+    {
+        "position": "Software Engineer",
+        "company": "BT",
+        "location": "London",
+        "date": "Sep 2021 - Aug 2022",
+        "desc": 
+        [
+            "Co-lead a project which involved the whole software development lifecycle, from the design with a project specification to the implementation, testing and documentation.",
+            "Bash & Powershell scripting.",
+            "Use of the Golang programming language for a command-line based messenging client.",
+            "Use of Azure Devops CI/CD and various testing frameworks e.g. Robot Integration testing",
+            "Use of virtual environments using Hyper-V and VMware in additon to Docker containers."
+
+        ],
+        "tags": ["Python","Powershell", "Go"]
     },
     {
         "position": "Backend Developer Intern",

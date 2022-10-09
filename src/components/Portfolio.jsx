@@ -37,8 +37,9 @@ export default class Portfolio extends Component {
         <Button
           className={str===activeStr ? 'filter-active':null} 
           size="lg" 
-          onClick={() => this.updateProjState(str)}>
-            {str}
+          onClick={() => this.updateProjState(str)}
+        >
+          {str}
         </Button>)
       })
     }
@@ -46,10 +47,10 @@ export default class Portfolio extends Component {
   render() {
     if (this.props.data) {
 
-      //Find distinct tags
-      var colour = []
-      this.state.projects.map(project => project.tags.map(n => colour.push(n)));
-      console.log(colour.filter((v, i, a) => a.indexOf(v) === i));
+      // //Find distinct tags
+      // var colour = []
+      // this.state.projects.map(project => project.tags.map(n => colour.push(n)));
+      // //console.log(colour.filter((v, i, a) => a.indexOf(v) === i));
 
     }
 
@@ -72,9 +73,7 @@ export default class Portfolio extends Component {
 
         <div style={{padding:"25px"}}>
           <SimpleGrid minChildWidth="46%" spacing="40px" mt={5}>
-          {this.state.currList.map(project => (
-            <ProjectCard project={project}/>
-          ))}
+            {this.state.currList.map(project => <ProjectCard project={project}/>)}
           </SimpleGrid>
         </div>
       </section>

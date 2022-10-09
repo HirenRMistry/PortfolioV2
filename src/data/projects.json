@@ -1,11 +1,19 @@
 {
   "projects": [
     {
+      "title": "Wordle Clone",
+      "date": "January 2022",
+      "category":"Personal Project",
+      "one_line": "Created a clone of the game Wordle. My clone allows users to guess words of length 4-7.",
+      "tags" : ["Personal", "ReactJS", "JavaScript"],
+      "url": "https://wordle.hirenmistry.co.uk/"
+    },
+    {
       "title": "Chat Application",
       "date": "November 2021",
       "category":"Personal Project",
-      "one_line": "Created a Full-Stack Chat Application using RESTful API endpoints and Sockets for instant messaging. Designed & implemented a database to hold users, messages and chats using PostgreSQL. Use of PyTest & Robot Framework for both unit and integration testing.",
-      "tags" : ["Personal", "Python","Flask", "ReactJS", "PostgreSQL", "AWS", "Robot-Framework"]
+      "one_line": "Created a Full-Stack Chat Application using RESTful API endpoints and Sockets for instant messaging. Designed & implemented a database to hold users, messages and chats using PostgreSQL. Use of PyTest & Robot Framework for both unit and integration testing. Created a GUI client in React and command client in Go.",
+      "tags" : ["Personal", "Python","Flask", "ReactJS", "PostgreSQL", "AWS", "Robot-Framework", "Go"]
     },
     {
       "title":"Dissertation: Human Activity Tracking using Smartphones",
@@ -54,7 +62,7 @@
       "title":"Portfolio Website (V2)",
       "date": "July 2020",
       "category":"Personal Project",
-      "one_line": "A React based Portfolio Website",
+      "one_line": "A React based Portfolio Website. All data is stored and pulled from JSON files for ease of maintainability.",
       "tags" : ["Personal", "ReactJS", "HTML", "CSS", "JavaScript"],
       "image":"portfolioWebsiteV2master.jpg",
       "github": true,
@@ -232,7 +240,7 @@
     }
 
   ],
-  "defaultCategory": "Year 3",
+  "defaultCategory": "Personal",
   "categories": ["All", "Year 1", "Year 2", "Year 3", "Personal", "Python", "Java"]
 
 }

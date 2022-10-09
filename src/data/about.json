@@ -1,6 +1,6 @@
 {
   "name":"Hiren Mistry",
-  "description":"Software Engineer @ Amazon Prime Video",
+  "description":"Software Engineer @ Amazon",
   "welcome":"",
   "image":"me.jpg",
   "bio1": "Hey!👋 My name is Hiren Mistry and I am a Computer Science Graduate from the University of Warwick.",
@@ -9,7 +9,6 @@
   "bio4": "I regularly keep up to date with the latest developments in Science and Technology and am passionate as to what the future of this developing field will bring to the world.",
   "bio5" : "Aside from software development, I regularly play Badminton and Basketball both competitively and socially.",
   "bio6" : "As an avid traveller, I have visited over 20 countries so far and would love to  ",
-  "bio_length": 5,
   "bio":[
     "👋 Hey! My name is Hiren Mistry.",
     "🎓 Computer Science Graduate from the University of Warwick.",
@@ -47,7 +46,5 @@
       "url":"https://www.tes.com/teaching-resources/shop/hiren2017",
       "className":"fa fa-book"
     }
-  ],
-  "skillmessage":"Here are some of my skills and their proficiency. Click on a project name for more infomation."
-
+  ]
 }
