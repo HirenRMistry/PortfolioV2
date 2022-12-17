@@ -16,6 +16,32 @@
     "places": [
         {
             "name": [
+                "Cancun",
+                "Chichén Itzá",
+                "Isla Mujeres"
+            ],
+            "continent": "North America",
+            "country": [
+                "Mexico"
+            ],
+            "year": 2022,
+            "position": [
+                [
+                    21.1619, 
+                    -86.8515
+                ],
+                [
+                    20.6843, 
+                    -88.5678
+                ],
+                [
+                    21.2322,
+                    -86.7341
+                ]
+            ]
+        },
+        {
+            "name": [
                 "Lisbon"
             ],
             "continent": "Europe",
