@@ -16,6 +16,22 @@
     "places": [
         {
             "name": [
+                "Prague"
+            ],
+            "continent": "Europe",
+            "country": [
+                "Czech Republic"
+            ],
+            "year": 2023,
+            "position": [
+                [
+                    50.0755,
+                    14.4378
+                ]
+            ]
+        },
+        {
+            "name": [
                 "Cancun",
                 "Chichén Itzá",
                 "Isla Mujeres"
