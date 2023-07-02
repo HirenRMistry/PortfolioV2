@@ -25,8 +25,8 @@ const MarkerPopup = ({ place: { position, continent, name, country, year } }) =>
   var markers = name.map((name, i) => (
     <Marker position={position[i]} icon={createIcon(continent)}>
       <Popup>
-        <h1 style={popupStyle}>{name.toUpperCase()}</h1>
-        <p style={popupStyle}>{country.length > 1 ? country[i] : country[0]} ({year})</p>
+        <h1 style={popupStyle}>{name.toUpperCase()} ({year})</h1>
+        <p style={popupStyle}>{country.length > 1 ? country[i] : country[0]} </p>
       </Popup>
     </Marker>
   ))
