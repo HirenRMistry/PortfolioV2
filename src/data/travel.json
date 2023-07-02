@@ -16,6 +16,29 @@
     "places": [
         {
             "name": [
+                "Lisbon",
+                "Sintra"
+
+            ],
+            "continent": "Europe",
+            "country": [
+                "Portugal"
+            ],
+            "year": 2023,
+            "position": [
+                [
+                    38.713718, 
+                    -9.139681
+                ],
+                [
+                    38.8010,
+                    -9.3783
+                ]
+
+            ]
+        },
+        {
+            "name": [
                 "Prague"
             ],
             "continent": "Europe",
