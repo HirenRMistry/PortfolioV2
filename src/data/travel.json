@@ -16,6 +16,89 @@
     "places": [
         {
             "name": [
+                "Singapore"
+            ],
+            "continent": "Asia",
+            "country": [
+                "Singapore"
+            ],
+            "year": 2024,
+            "position": [
+                [
+                    1.3521, 
+                    103.8198
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Penang",
+                "Chenderoh Lake",
+                "Cameron Highlands",
+                "Kuala Lumpur",
+                "Malacca"
+            ],
+            "continent": "Asia",
+            "country": [
+                "Malaysia"
+            ],
+            "year": 2024,
+            "position": [
+                [
+                    5.2632, 
+                    100.4846
+                ],
+                [
+                    4.9719, 
+                    100.9595
+                ],
+                [
+                    4.4679, 
+                    101.3848
+                ],
+                [
+                    3.1499, 
+                    101.6945
+                ],
+                [
+                    2.1896, 
+                    102.2501
+                ]
+            ]
+        },
+        {
+            "name": [
+                "Chiang Mai",
+                "Surat Thani",
+                "Khao Sok",
+                "Koh Samui"
+            ],
+            "continent": "Asia",
+            "country": [
+                "Thailand"
+            ],
+            "year": 2024,
+            "position": [
+                [
+                    18.7883, 
+                    98.9853
+                ],
+                [
+                    9.1342,
+                    99.3334
+                ],
+                [
+                    8.9777, 
+                    98.6382
+                ],
+                [
+                    9.512, 
+                    100.0136
+                ]
+            ]
+        },
+        {
+            "name": [
                 "Ho Chi Minh City",
                 "Nha Trang",
                 "Hoi An",
