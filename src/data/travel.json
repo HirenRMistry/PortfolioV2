@@ -16,6 +16,58 @@
     "places": [
         {
             "name": [
+                "Seoul",
+                "DMZ Zone",
+                "Sokcho",
+                "Gyeongju",
+                "Busan",
+                "Jeju Island"
+            ],
+            "continent": "Asia",
+            "country": [
+                "South Korea"
+            ],
+            "year": 2025,
+            "position": [
+                    [37.566535, 126.9779692], 
+                    [37.9198, 126.6917], 
+                    [38.20848, 128.59245], 
+                    [35.8428, 129.2198], 
+                    [35.1795543, 129.0756416], 
+                    [33.38, 126.57]       
+            ]
+        },        
+        {
+            "name": [
+                "Tokyo",
+                "Mount Fuji",
+                "Kyoto",
+                "Osaka",
+                "Nara",
+                "Hiroshima",
+                "Miyajima",
+                "Hakone",
+                "Kamakura"
+            ],
+            "continent": "Asia",
+            "country": [
+                "Japan"
+            ],
+            "year": 2025,
+            "position": [
+                [35.6895, 139.6917],
+                [35.3606, 138.7274],
+                [35.0116, 135.7681],
+                [34.6937, 135.5023],
+                [34.6851, 135.8048],
+                [34.3963, 132.4594],
+                [34.2713, 132.3168],
+                [35.2323, 139.1069],
+                [35.3192, 139.5468]
+        ]
+        },
+        {
+            "name": [
                 "Singapore"
             ],
             "continent": "Asia",
