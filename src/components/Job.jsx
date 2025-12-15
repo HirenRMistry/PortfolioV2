@@ -69,7 +69,7 @@ export default class Job extends Component {
           </ul>
         }
         <div style={{ marginTop: '5px' }}>
-          {tags.map(tag => <TechTag tag={tag} />)}
+          {tags.sort().map(tag => <TechTag tag={tag} />)}
         </div>
       </VerticalTimelineElement>
 

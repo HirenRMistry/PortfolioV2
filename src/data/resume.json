@@ -1,14 +1,36 @@
 [
+        {
+        "position": "Software Engineer",
+        "company": "SitusAMC",
+        "location": "London",
+        "date": "November 2025 - Present",
+        "desc": 
+        [
+            "Part of the Quartz team."
+        ],
+        "tags": ["Python", "JavaScript", "AWS", "EKS"]
+    },
     {
         "position": "Software Engineer",
         "company": "Amazon",
         "location": "London",
-        "date": "August 2022 - Present",
+        "date": "August 2022 - September 2025",
         "desc": 
         [
-            "Prime Video iOS Team"
+            "Part of the Prime Video iOS Client team responsible for all pages within the iOS/tvOS application.",
+            "Worked on the Full Prime Video stack, including the Python/Java/Kotlin/JavaScript backend and Swift/Objective-C frontend.",
+            "Created automated UI tests, integration tests and end-to-end tests to increase overall test coverage to 90%.",
+            "Led key investigations and architected solutions to solve issues with increases in memory consumption. Solutions increased App Availability to 99.9%, a record high.",
+            "Carried out regular support work on-call, solving tickets from neighbouring teams and customer tickets.",
+            "Led the migration of the team’s alarms and dashboards to AWS CloudWatch using TypeScript.",
+            "Created proposals for new features, considering the different APIs involved, team resources and overall design/approach, using the whole software development lifecycle. The features were then developed and put into production.",
+            "Creation of the Tier 1 PV iOS Edge Service using Python, Java & Kotlin using an ECS on AWS Fargate solution, capable of withstanding high TPS with low latency, ensuring a smooth, consistent client experience. This resulted in an increased throughput of 10 times and a reduced CPU cost by 70%.",
+            "Automated the load testing workflow in order to test new client-consumed APIs fast and efficiently, increasing developer velocity and reducing the number of developer days required by 65%.",
+            "Regular use of Test & Behaviour Driven Development (TDD/BDD) practices to ensure code is robust and adheres to user and stakeholder requirements.",
+            "Led a team of four engineers to migrate the largest API responsible for serving the PV Details Page, reducing average P90 latency by 26.2%, with no major issues during dial up.",
+            "Led the migration of all PV iOS traffic from the DUB to ZAZ data centre, liaising with key dependency stake holders, conducting shadow, QA and load testing. Managed a junior SDE in order to complete code changes."
         ],
-        "tags": ["Swift", "JavaScript"]
+        "tags": ["Swift", "JavaScript", "Python", "Kotlin", "AWS" , "TypeScript", "ECS"]
     },
     {
         "position": "Software Engineer",
