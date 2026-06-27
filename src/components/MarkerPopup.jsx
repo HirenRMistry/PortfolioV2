@@ -1,38 +1,54 @@
 import React from 'react';
-import { Marker, Popup } from 'react-leaflet'
+import { Marker, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-const createIcon = (continent) => {
-  return L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow,
-    iconAnchor: [10, 41],
-    popupAnchor: [2, -40],
-    className: continent.replace(" ", "") + "Icon"
+const CONTINENT_COLOURS = {
+  'Europe':        '#3b82f6',
+  'Asia':          '#f59e0b',
+  'North America': '#10b981',
+  'South America': '#ec4899',
+  'Africa':        '#f97316',
+  'Australia':     '#8b5cf6',
+};
+
+function createPulseIcon(color) {
+  return L.divIcon({
+    className: '',
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+    popupAnchor: [0, -10],
+    html: `
+      <div style="position:relative;width:20px;height:20px;">
+        <div style="
+          position:absolute;inset:0;border-radius:50%;
+          background:${color};opacity:0.25;
+          animation:pulse-ring 2s ease-out infinite;
+        "></div>
+        <div style="
+          position:absolute;top:50%;left:50%;
+          transform:translate(-50%,-50%);
+          width:10px;height:10px;border-radius:50%;
+          background:${color};
+          box-shadow:0 0 6px ${color};
+        "></div>
+      </div>
+    `,
   });
 }
 
-const MarkerPopup = ({ place: { position, continent, name, country, year } }) => {
+export default function MarkerPopup({ place }) {
+  const { position, continent, name, country, year } = place;
+  const color = CONTINENT_COLOURS[continent] || '#94a3b8';
+  const icon = createPulseIcon(color);
 
-  var popupStyle = {
-    margin: '1px 0',
-    paddingBottom: '1px',
-    textAlign: 'center'
-  };
-
-  var markers = name.map((name, i) => (
-    <Marker position={position[i]} icon={createIcon(continent)}>
-      <Popup>
-        <h1 style={popupStyle}>{name.toUpperCase()} ({year})</h1>
-        <p style={popupStyle}>{country.length > 1 ? country[i] : country[0]} </p>
-      </Popup>
+  return name.map((cityName, i) => (
+    <Marker key={cityName} position={position[i]} icon={icon}>
+      <Tooltip direction="top" offset={[0, -8]} opacity={1}>
+        <div className="map-tooltip">
+          <strong>{cityName}</strong>
+          <span>{country.length > 1 ? country[i] : country[0]} · {year}</span>
+        </div>
+      </Tooltip>
     </Marker>
-  ))
-
-  return markers
-
+  ));
 }
-
-export default MarkerPopup

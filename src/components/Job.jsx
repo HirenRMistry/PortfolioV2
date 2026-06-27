@@ -1,78 +1,51 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaBriefcase, FaChevronDown, FaAmazon } from 'react-icons/fa';
+import { FaBriefcase, FaAmazon } from 'react-icons/fa';
 import TechTag from './TechTag';
 
-export default class Job extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false
-    };
-    this.chevronStyle = {
-      color: "#CC5200"
-    }
-    this.contentStyle = {
-      border: '2px solid  #0762f9', color: 'black'
-    }
-    this.contentArrowStyle = {
-      borderRight: '7px solid  #0762f9'
-    }
-    this.iconStyle = {
-      background: '#95A3A3', color: '#fff'
-    }
-  }
+const ICON_MAP = { Amazon: <FaAmazon /> };
 
+const contentStyle = { border: '2px solid #f97316', color: '#0f172a', borderRadius: '12px' };
+const contentArrowStyle = { borderRight: '7px solid #f97316' };
+const iconStyle = { background: '#f97316', color: '#fff' };
 
-  chevronButton = () => {
-    return (
-      <button
-        onClick={() => this.setState({ show: !this.state.show })}
-        style={this.chevronStyle}
-      >
-        <FaChevronDown />
-      </button>
-    )
-  }
+export default function Job({ job }) {
+  const { date, position, company, desc, location, tags } = job;
+  const [expanded, setExpanded] = useState(false);
 
-  iconSelector = (company) => {
-    switch (company) {
-      case "Amazon":
-        return <FaAmazon/>
-    
-      default:
-        return <FaBriefcase/>
-    }
-  }
+  return (
+    <VerticalTimelineElement
+      className="vertical-timeline-element--work"
+      contentStyle={contentStyle}
+      contentArrowStyle={contentArrowStyle}
+      date={date}
+      iconStyle={iconStyle}
+      icon={ICON_MAP[company] ?? <FaBriefcase />}
+    >
+      <h3 className="job-title">
+        {position}
+        {desc.length > 0 && (
+          <button
+            className={`expand-btn ${expanded ? 'expanded' : ''}`}
+            onClick={() => setExpanded(v => !v)}
+            aria-label={expanded ? 'Collapse' : 'Expand'}
+          >
+            <i className="fa fa-chevron-down" />
+          </button>
+        )}
+      </h3>
+      <h4 className="job-company">{company} · {location}</h4>
 
+      <div className={`job-desc-wrapper ${expanded ? 'open' : ''}`}>
+        <ul className="job-desc">
+          {desc.map((line, i) => <li key={i}>{line}</li>)}
+        </ul>
+      </div>
 
-
-  render() {
-    const { date, position, company, desc, location, tags } = this.props.job;
-
-
-    return (
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={this.contentStyle}
-        contentArrowStyle={this.contentArrowStyle}
-        date={date}
-        iconStyle={this.iconStyle}
-        icon={this.iconSelector(company)}
-      >
-        <h3>{position}  {desc.length ? this.chevronButton() : null}</h3>
-        <h4><i>{company} - {location}</i></h4>
-        {this.state.show &&
-          <ul style={{ listStyleType: "disc" }}>
-            {desc.map(line => <li style={{ marginLeft: "20px" }}>{line}</li>)}
-          </ul>
-        }
-        <div style={{ marginTop: '5px' }}>
-          {tags.sort().map(tag => <TechTag tag={tag} />)}
-        </div>
-      </VerticalTimelineElement>
-
-    )
-  }
+      <div className="job-tags">
+        {tags.sort().map(tag => <TechTag key={tag} tag={tag} />)}
+      </div>
+    </VerticalTimelineElement>
+  );
 }

@@ -1,82 +1,43 @@
-import React, { Component } from 'react';
-import 'aos/dist/aos.css';
+import React, { useState } from 'react';
+import { SimpleGrid, Button, Wrap, WrapItem } from '@chakra-ui/react';
 import ProjectCard from './ProjectCard';
-import { SimpleGrid } from '@chakra-ui/layout';
-import { Button } from '@chakra-ui/react';
 
-export default class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      projects: this.props.data.projects, 
-      defaultCategory: this.props.data.defaultCategory,
-      categories: this.props.data.categories
-    };
+export default function Portfolio({ data }) {
+  const { projects = [], defaultCategory = 'All', categories = [] } = data || {};
 
-    this.state.buttons = this.createFilterButtons(this.state.defaultCategory);
-    this.state.currList = this.filterProjects(this.state.defaultCategory);
+  const [activeCategory, setActiveCategory] = useState(defaultCategory);
 
-    this.updateProjState = this.updateProjState.bind(this);
-    this.createFilterButtons = this.createFilterButtons.bind(this);
-  }
+  const filtered = activeCategory === 'All'
+    ? projects
+    : projects.filter(p => p.tags.includes(activeCategory));
 
-  filterProjects = (str) => {
-    return this.state.projects.filter((el) => el.tags.includes(str))
-  }
+  return (
+    <section id="portfolio" className="section">
+      <div className="section-title-wrap">
+        <h2 className="section-title">Portfolio</h2>
+      </div>
+      <p className="section-subtitle">University &amp; personal projects</p>
 
-  updateProjState = (str) => {
-    this.setState({
-      currList: str==='All' ? this.state.projects : this.filterProjects(str),
-      buttons: this.createFilterButtons(str)
-    })
-  }
+      <Wrap spacing={2} mb={8} justify="center">
+        {categories.map(cat => (
+          <WrapItem key={cat}>
+            <Button
+              size="sm"
+              variant={activeCategory === cat ? 'solid' : 'outline'}
+              colorScheme="orange"
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </Button>
+          </WrapItem>
+        ))}
+      </Wrap>
 
-  createFilterButtons = (activeStr) => {
-    return this.state.categories.map(str => {
-        return(
-        <Button
-          className={str===activeStr ? 'filter-active':null} 
-          size="lg" 
-          onClick={() => this.updateProjState(str)}
-        >
-          {str}
-        </Button>)
-      })
-    }
-
-  render() {
-    if (this.props.data) {
-
-      // //Find distinct tags
-      // var colour = []
-      // this.state.projects.map(project => project.tags.map(n => colour.push(n)));
-      // //console.log(colour.filter((v, i, a) => a.indexOf(v) === i));
-
-    }
-
-    return (
-
-      <section id="portfolio">
-
-        <div className="row">
-
-          <div className="twelve columns collapsed">
-            <div className="portfolioTitle">
-              <h1><span>Portfolio</span></h1>
-              <h1>Here are some of my university and personal projects.</h1>
-            </div>
-            <div id="portfolio-flters" className="button-group filter-button-group ">
-              {this.state.buttons}
-            </div>
-          </div>
-        </div>
-
-        <div style={{padding:"25px"}}>
-          <SimpleGrid minChildWidth="46%" spacing="40px" mt={5}>
-            {this.state.currList.map(project => <ProjectCard project={project}/>)}
-          </SimpleGrid>
-        </div>
-      </section>
-    );
-  }
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+        {filtered.map(project => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </SimpleGrid>
+    </section>
+  );
 }

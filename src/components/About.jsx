@@ -1,31 +1,25 @@
-import React, { Component } from 'react';
-import AOS from 'aos';
+import React from 'react';
 
-export default class About extends Component {
+export default function About({ data }) {
+  const { bio, image } = data || {};
 
-  render() {
-    if (this.props.data) {
-
-      var { bio, image: profilepic } = this.props.data;
-
-      AOS.init({
-        duration: 2000
-      });
-      
-    }
-    return (
-      <section id="about">
-        <div className="row">
-          <div className="three columns">
-            <img className="profile-pic" data-aos="fade-up" src={"images/" + profilepic} alt="Profile Pic" />
-          </div>
-          <div className="nine columns main-col">
-            <h2>ME.</h2>
-            {bio.map(bioLine => <div><p>{bioLine}</p></div>)}
-          </div>
+  return (
+    <section id="about" className="section about-section">
+      <div className="about-inner">
+        <img
+          className="profile-pic"
+          src={`images/${image}`}
+          alt="Hiren Mistry"
+        />
+        <div className="about-text">
+          <h2 className="section-title">About Me</h2>
+          <ul className="bio-list">
+            {bio?.map((line, i) => (
+              <li key={i}>{line}</li>
+            ))}
+          </ul>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }
-

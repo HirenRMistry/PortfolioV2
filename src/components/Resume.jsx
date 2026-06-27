@@ -1,36 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
 import Job from './Job';
-import { VerticalTimeline}  from 'react-vertical-timeline-component';
 
-export default class Resume extends Component {
-
-  render() {
-    if(this.props.data){
-      var resume = this.props.data;
-    }
-
-    var titleContainer = {
-      textAlign:'center', 
-      marginBottom: '30px'
-    };
-    var titleStyle = {
-      borderBottom: '3px solid orange',
-      padding: '3px',
-    }
-
-    return (
-        <section id="resume">
-          
-          <div style={titleContainer}>
-            <h1><span style={titleStyle}>Experience</span></h1>
-          </div>
-          
-          <VerticalTimeline>
-            {resume.map(job => <Job job={job}/>)}
-          </VerticalTimeline>
-
-        </section>
-    );
-  }
+export default function Resume({ data }) {
+  return (
+    <section id="resume" className="section">
+      <div className="section-title-wrap">
+        <h2 className="section-title">Experience</h2>
+      </div>
+      <VerticalTimeline>
+        {(data || []).map(job => (
+          <Job key={`${job.company}-${job.date}`} job={job} />
+        ))}
+      </VerticalTimeline>
+    </section>
+  );
 }
-

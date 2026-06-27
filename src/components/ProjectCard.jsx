@@ -1,49 +1,39 @@
-import React, { Component } from 'react';
-import { HStack } from '@chakra-ui/react';
+import React from 'react';
 import TechTag from './TechTag';
+import colours from '../data/colours.json';
 
-export default class ProjectCard extends Component {
+function ProjectLink({ url, github }) {
+  if (!url) return null;
+  return (
+    <a href={url} target="_blank" rel="noreferrer" className="project-link">
+      <i className={`fa ${github ? 'fa-github' : 'fa-external-link'}`} />
+    </a>
+  );
+}
 
-  render() {
-    var { url, github, title, category, date, one_line, tags } = this.props.project
-    // const project = this.props.project
+export default function ProjectCard({ project }) {
+  const { url, github, title, category, date, one_line, tags } = project;
+  // Use the first meaningful tag colour as the top accent
+  const accentTag = tags.find(t => colours[t] && colours[t] !== colours['default']);
+  const accent = accentTag ? colours[accentTag] : '#f97316';
 
-    function urlSwitcher(url, github) {
-      if (url && github) {
-        return <a href={url}><i className=" projlink github fa fa-github"></i></a>
-      }
-      if (url) {
-        return <a href={url}><i className=" projlink fa fa-external-link"></i></a>
-      }
-      return null;
-    }
-
-    return (
-      <HStack
-        p={4}
-        rounded="xl"
-        borderWidth="1px"
-        w="100%"
-        h="100%"
-        textAlign="left"
-        align="start"
-        spacing={4}
-        cursor="pointer"
-        _hover={{ shadow: "dark-lg" }}
-        boxShadow="lg"
-      >
-        <div key={title} className="columns portfolio-item">
-          <div className="projectCard">
-            <h1>{title}{urlSwitcher(url, github)}</h1>
-            <h2>{category}</h2>
-            <h3>{date}</h3>
-            <p>{one_line}</p>
-            <div>
-              {tags.map(tag => <TechTag tag={tag} />)}
-            </div>
-          </div>
+  return (
+    <div className="project-card" style={{ '--accent': accent }}>
+      <div className="project-card-top" />
+      <div className="project-card-body">
+        <div>
+          <h3 className="card-title">
+            {title}
+            <ProjectLink url={url} github={github} />
+          </h3>
+          <p className="card-category">{category}</p>
+          <p className="card-date">{date}</p>
+          <p className="card-desc">{one_line}</p>
         </div>
-      </HStack>
-    );
-  }
+        <div className="card-tags">
+          {tags.map(tag => <TechTag key={tag} tag={tag} />)}
+        </div>
+      </div>
+    </div>
+  );
 }
