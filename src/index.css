@@ -106,9 +106,12 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   color: #94a3b8;
   transition: color 0.2s;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.nav-links a:hover { color: #f8fafc; }
+.nav-links a:hover { color: #f97316; border-bottom-color: #f97316; }
 
 .nav-hamburger {
   display: none;
@@ -118,7 +121,9 @@ img { max-width: 100%; display: block; }
   font-size: 1.3rem;
   cursor: pointer;
   padding: 4px;
+  transition: color 0.2s;
 }
+.nav-hamburger:hover { color: #f97316; }
 
 .nav-mobile {
   display: flex;
