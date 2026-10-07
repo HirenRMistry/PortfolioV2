@@ -3,8 +3,16 @@ import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import MarkerPopup from './MarkerPopup';
 
-const DARK_TILE = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png';
-const DARK_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>';
+const CARTO_VOYAGER = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png';
+const CARTO_VOYAGER_LABELS = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png';
+const CARTO_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>';
+const DEFAULT_OSM_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const DEFAULT_OSM_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+function cartoTileUrl(url, apiKey) {
+  const sep = url.includes('?') ? '&' : '?';
+  return `${url}${sep}key=${encodeURIComponent(apiKey)}`;
+}
 
 const CONTINENT_COLOURS = {
   'Europe':        '#3b82f6',
@@ -71,7 +79,11 @@ function RecenterButton({ center, zoom }) {
 }
 
 export default function Map({ data }) {
-  const { places = [], center = [30, 10] } = data || {};
+  const { places = [], center = [30, 10], url: osmUrl, attribution: osmAttribution } = data || {};
+  const cartoKey = process.env.REACT_APP_CARTO_BASEMAPS_KEY;
+  const useCarto = Boolean(cartoKey);
+  const baseTileUrl = useCarto ? cartoTileUrl(CARTO_VOYAGER, cartoKey) : (osmUrl || DEFAULT_OSM_URL);
+  const tileAttribution = useCarto ? CARTO_ATTRIBUTION : (osmAttribution || DEFAULT_OSM_ATTRIBUTION);
   const DEFAULT_ZOOM = 2;
   const sectionRef = useRef(null);
   const [animate, setAnimate] = useState(false);
@@ -110,8 +122,8 @@ export default function Map({ data }) {
       <div className="map-wrapper">
         <MapContainer center={center} zoom={DEFAULT_ZOOM} scrollWheelZoom={false} zoomControl={true}
           style={{ height: '65vh', width: '100%', background: '#e5e7eb' }}>
-          <TileLayer attribution={DARK_ATTRIBUTION} url={DARK_TILE} />
-          <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png" />
+          <TileLayer attribution={tileAttribution} url={baseTileUrl} />
+          {useCarto && <TileLayer url={cartoTileUrl(CARTO_VOYAGER_LABELS, cartoKey)} />}
           {places.map(place => <MarkerPopup key={place.name[0]} place={place} />)}
           <RecenterButton center={center} zoom={DEFAULT_ZOOM} />
         </MapContainer>
